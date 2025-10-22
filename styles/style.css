@@ -110,7 +110,7 @@
   /* Backgrounds */
   --color-bg: #320000;
   --color-bg-about: #320000;
-  --color-bg-footer: #4c0000as;
+  --color-bg-footer: rgb(50, 0, 0, 0.8);
   --color-bg-holding-page: rgba(72, 0, 0, 0.35);
   /* Headings */
   --h1-color: #fff0d6;
@@ -133,7 +133,7 @@
   /* Navigation */
   --color-nav-link: #fff0d6;
   --color-nav-link-hover: #930000;
-  --color-nav-arrow: #930000;
+  --color-nav-arrow: #fff0d6;
   --color-nav-arrow-hover: #930000;
   --color-nav-arrow-stroke: #930000;
   --color-nav-arrow-stroke-hover: #930000;
@@ -147,7 +147,7 @@
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
+  --color-bg-selection: #005336;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -214,7 +214,10 @@ html {
 body {
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
-  background: var(--color-bg);
+  background: url(../assets/work/background-texture.jpg);
+  background-color: var(--color-bg);
+  background-repeat: no-repeat;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -408,6 +411,14 @@ svg {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+.hero-headline-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-small);
+  min-height: 80vh;
 }
 
 /* ---------------------------------------- */
@@ -685,7 +696,7 @@ a.nav-link-primary:hover {
 
 .nav-branding {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   padding: var(--padding-small);
   align-items: center;
@@ -706,13 +717,9 @@ a.nav-link-primary:hover {
 
 .hero-headline-wrapper {
   width: 100%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-
-  padding: var(--padding-small);
-
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-large);
   min-height: 80vh;
 }
 
@@ -1030,6 +1037,12 @@ a.nav-link-primary:hover {
 }
 .footer-socials-list {
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-socials-list .footer-item {
+  padding: 1rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1414,6 +1427,14 @@ to keep your styles reusable and consistent.
   .h2-full-width {
     width: 70%;
     padding: var(--padding-small);
+  }
+  .hero-headline-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: var(--padding-large);
+    min-height: 80vh;
   }
 
   /* ----------------------------- */
