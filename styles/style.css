@@ -198,7 +198,9 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+  /* cursor: url("../assets/temp/up-cursor.png"), auto !important;  */
+
+  /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -216,7 +218,8 @@ body {
   color: var(--color-text-primary);
   background: url(../assets/work/background-texture.jpg);
   background-color: var(--color-bg);
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
+  background-size: contain;
   min-width: 100%;
   display: flex;
   flex-direction: column;
@@ -413,14 +416,6 @@ svg {
   height: 100%;
 }
 
-.hero-headline-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: var(--padding-small);
-  min-height: 80vh;
-}
-
 /* ---------------------------------------- */
 /* 🧭 Responsive Navigation (Coming Soon)   */
 /* This section is in progress — you'll build a mobile-friendly nav bar here */
@@ -450,11 +445,12 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h1-color);
+  font-weight: 300;
 }
 
 h2 {
@@ -715,6 +711,15 @@ a.nav-link-primary:hover {
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
+.logo {
+  fill: #fff0d6;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+}
+.logo:hover {
+  fill: orange;
+}
+
 .hero-headline-wrapper {
   width: 100%;
   display: flex;
@@ -724,8 +729,7 @@ a.nav-link-primary:hover {
 }
 
 .hero-wordmark {
-  grid-column: 1/3;
-  grid-row: 1/2;
+  margin-bottom: 1rem;
 }
 .hero-icon {
   font-size: 4rem;
@@ -1428,14 +1432,6 @@ to keep your styles reusable and consistent.
     width: 70%;
     padding: var(--padding-small);
   }
-  .hero-headline-wrapper {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: var(--padding-large);
-    min-height: 80vh;
-  }
 
   /* ----------------------------- */
   /* 📦 Padding Utilities (Desktop) */
@@ -1481,6 +1477,12 @@ to keep your styles reusable and consistent.
   }
 
   .hero-headline-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: var(--padding-large);
+    min-height: 80vh;
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
@@ -1543,6 +1545,10 @@ to keep your styles reusable and consistent.
     padding-right: 2rem;
   }
 
+  .hero-wordmark {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
   /* Main Project Image Area on Large Devices */
 
   .project-details {
