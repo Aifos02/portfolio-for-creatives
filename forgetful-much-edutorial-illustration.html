@@ -31,6 +31,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./lightbox2/dist/css/lightbox.min.css" />
     <link rel="stylesheet" href="./styles/masonry.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
@@ -66,7 +67,10 @@
             <h3>Edutorial illustration</h3>
           </div>
           <div class="project-description col-2">
-            <p>cool cool cool cool cool</p>
+            <p>
+              An editorial illustration for an article titled, "Forgetful Much?
+              How to remember Things Better, Starting Now"
+            </p>
           </div>
         </div>
         <div class="project-description-container">
@@ -85,15 +89,21 @@
         </div>
       </aside>
       <main class="project-full-width">
-        <figure class="project-image">
-          <img
-            src="assets/projects-title-images/Edutorial-illustration.jpg"
-            width="1920"
-            height="1080"
-            loading="lazy"
-            alt="Human brain under a pile of stuff"
-          />
-        </figure>
+        <a
+          href="assets/projects-title-images/Edutorial-illustration.jpg"
+          data-lightbox="set-1"
+          data-title="Forgetful Much?"
+        >
+          <figure class="project-image">
+            <img
+              src="assets/projects-title-images/Edutorial-illustration.jpg"
+              width="1920"
+              height="1080"
+              loading="lazy"
+              alt="Describe your project"
+            />
+          </figure>
+        </a>
 
         <div class="project-description-container">
           <div class="project-description col-4">
@@ -183,7 +193,7 @@
     <div id="myID" class="bottomMenu hide">
       <a href="poor-things-movie-poster.html">Next Project</a>
     </div>
-
+    <script src="./lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
     <script>
       myID = document.getElementById("myID");
 

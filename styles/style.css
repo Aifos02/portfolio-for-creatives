@@ -102,47 +102,46 @@
   --font-family-heading: "Averia Serif Libre", serif;
   --font-family-project-title: "Borel", serif;
   /* Core Colours */
-  --color-text-primary: #fff0d6;
-  --color-text-secondary: #fff0d6;
-  --color-accent-primary: #fff0d6;
-  --color-accent-secondary: #930000;
+  --color-text-primary: #f9ddac;
+  --color-text-secondary: #f9ddac;
+  --color-accent-primary: #f9ddac;
+  --color-accent-secondary: #f9ddac;
   --color-overlay-primary: rgba(50, 0, 0, 0.7);
-  --color-highlight: lemonchiffon;
+  --color-highlight: #f9ddac;
   /* Backgrounds */
   --color-bg: #320000;
   --color-bg-about: rgb(50, 0, 0, 0.7);
   --color-bg-footer: rgb(50, 0, 0, 0.7);
   --color-bg-holding-page: rgba(72, 0, 0, 0.35);
   /* Headings */
-  --h1-color: #fff0d6;
-  --h2-color: #fff0d6;
-  --h3-color: #fff0d6;
-  --h4-color: #fff0d6;
-  --h5-color: #fff0d6;
-  --h6-color: #fff0d6;
+  --h1-color: #f9ddac;
+  --h2-color: #f9ddac;
+  --h3-color: #f9ddac;
+  --h4-color: #f9ddac;
+  --h5-color: #f9ddac;
+  --h6-color: #f9ddac;
   /* Special Text Colours */
-  --color-text-holding-title: #fff0d6;
-  --color-text-project-category: #fff0d6;
-  --color-text-project-description: #fff0d6;
-  --color-text-project-sidebar: #930000;
-  --color-text-project-title: #fff0d6;
-  --color-text-work-grid-title: #fff0d6;
+  --color-text-holding-title: #f9ddac;
+  --color-text-project-category: #f9ddac;
+  --color-text-project-description: #f9ddac;
+  --color-text-project-sidebar: #ffffff;
+  --color-text-project-title: #f9ddac;
+  --color-text-work-grid-title: #f9ddac;
   /* Link States */
-  --color-link: #fff0d6;
-  --color-link-hover: #930000;
-  --color-link-visited: #fff0d6;
+  --color-link: #f9ddac;
+  --color-link-hover: white;
+  --color-link-visited: #f9ddac;
   /* Navigation */
-  --color-nav-link: #fff0d6;
-  --color-nav-link-hover: #930000;
-  --color-nav-arrow: #fff0d6;
-  --color-nav-arrow-hover: #930000;
-  --color-nav-arrow-stroke: #930000;
-  --color-nav-arrow-stroke-hover: #930000;
+  --color-nav-link: #f9ddac;
+  --color-nav-link-hover: #ffffff;
+  --color-nav-arrow: #f9ddac;
+  --color-nav-arrow-hover: #ffffff;
+  --color-nav-arrow-stroke: #ffffff;
+  --color-nav-arrow-stroke-hover: #ffffff;
   /* Components */
-  --color-bg-full-width: #fff0d6;
+  --color-bg-full-width: #f9ddac;
 
   /* Special Elements */
-  --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
   --color-bg-selection: #005336;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
@@ -703,12 +702,12 @@ a.nav-link-primary:hover {
 }
 
 .logo {
-  fill: #fff0d6;
+  fill: #f9ddac;
   transition: 200ms;
   transition-timing-function: ease-in-out;
 }
 .logo:hover {
-  fill: #930000;
+  fill: #ffffff;
 }
 
 .hero-headline-wrapper {
@@ -1321,6 +1320,10 @@ a.nav-link-primary:hover {
   padding: var(--padding-small);
   text-align: center;
   margin: 0 auto;
+}
+
+.error-headline-index {
+  color: #005336;
 }
 
 /* .error-headline-text-wrapper {
