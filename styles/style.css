@@ -102,8 +102,8 @@
   --font-family-heading: "Averia Serif Libre", serif;
   --font-family-project-title: "Borel", serif;
   /* Core Colours */
-  --color-text-primary: #f9ddac;
-  --color-text-secondary: #f9ddac;
+  --color-text-primary: #24bd40;
+  --color-text-secondary: #22843c;
   --color-accent-primary: #f9ddac;
   --color-accent-secondary: #f9ddac;
   --color-overlay-primary: rgba(50, 0, 0, 0.7);
@@ -121,12 +121,12 @@
   --h5-color: #f9ddac;
   --h6-color: #f9ddac;
   /* Special Text Colours */
-  --color-text-holding-title: #f9ddac;
-  --color-text-project-category: #f9ddac;
-  --color-text-project-description: #f9ddac;
+  --color-text-holding-title: #acf9c3;
+  --color-text-project-category: #320000;
+  --color-text-project-description: #389457;
   --color-text-project-sidebar: #ffffff;
-  --color-text-project-title: #f9ddac;
-  --color-text-work-grid-title: #f9ddac;
+  --color-text-project-title: #b6acf9;
+  --color-text-work-grid-title: #320000;
   /* Link States */
   --color-link: #f9ddac;
   --color-link-hover: white;
