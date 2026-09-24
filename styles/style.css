@@ -32,8 +32,8 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Averia Serif Libre (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/* Fraunces (for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
 
@@ -98,8 +98,8 @@
 
 :root {
   /* Typography */
-  --font-family-body: "Averia Serif Libre", serif;
-  --font-family-heading: "Averia Serif Libre", serif;
+  --font-family-body: "Fraunces", serif;
+  --font-family-heading: "Fraunces", serif;
   --font-family-project-title: "Borel", serif;
   /* Core Colours */
   --color-text-primary: #24bd40;
@@ -212,7 +212,7 @@ html {
 body {
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
-  background: url(../assets/work/background-texture.jpg);
+  /* background: url(../assets/work/background-texture.jpg); */
   background-color: var(--color-bg);
   background-repeat: repeat-x;
   background-size: contain;
@@ -861,8 +861,12 @@ a.nav-link-primary:hover {
 
 /* Project container for background and padding */
 .project-container {
-  background: var(--color-accent-primary); /* Set project background color */
+  background: transparent; /* Set project background color */
   padding: var(--padding-medium);
+}
+
+.project-container:hover {
+  background: var(--color-accent-primary);
 }
 
 /* Overlay (appears on hover) */
