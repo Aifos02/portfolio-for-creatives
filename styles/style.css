@@ -1493,7 +1493,7 @@ to keep your styles reusable and consistent.
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     padding: var(--padding-large);
     min-height: 80vh;
   }
