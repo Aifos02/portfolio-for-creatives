@@ -451,7 +451,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  font-family: var(--font-family-project-title);
+  font-family: var(--font-family-heading);
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h2-color);
@@ -466,7 +466,8 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-style: italic;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h4-color);
@@ -564,6 +565,8 @@ sup {
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
   color: var(--color-text-project-category);
+  text-align: left;
+  padding-left: 1.5rem;
 }
 
 /*
