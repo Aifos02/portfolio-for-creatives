@@ -100,7 +100,7 @@
   /* Typography */
   --font-family-body: "Fraunces", serif;
   --font-family-heading: "Fraunces", serif;
-  --font-family-project-title: "Borel", serif;
+  --font-family-project-title: "Fraunces", serif;
   /* Core Colours */
   --color-text-primary: #24bd40;
   --color-text-secondary: #22843c;
@@ -194,7 +194,7 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  cursor: url("../assets/branding-images/arrow-pointer-gold-4.png"), auto !important;
+  cursor: url("../assets/branding-images/cursor.svg"), auto !important;
 
   /* Custom cursor (change the URL below to use your own) */
 
@@ -532,6 +532,8 @@ sup {
 .project-title {
   font-size: 3.625rem;
   font-family: var(--font-family-project-title);
+  font-style: italic;
+  font-weight: 600;
   color: var(--color-text-project-title);
   margin-bottom: 1rem;
 }
@@ -1232,6 +1234,18 @@ a.nav-link-primary:hover {
   font-size: 1rem;
   line-height: 1.2; /* Consistent line height for project items to improve spacing */
   margin-bottom: 0.25rem;
+}
+
+/* Upheaval project page — remove extra header spacing */
+body.play-page > .hero {
+  height: auto;
+  min-height: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+body.play-page .project-wrapper {
+  margin-top: 0;
 }
 
 /*
