@@ -102,8 +102,8 @@
   --font-family-heading: "Fraunces", serif;
   --font-family-project-title: "Fraunces", serif;
   /* Core Colours */
-  --color-text-primary: #24bd40;
-  --color-text-secondary: #22843c;
+  --color-text-primary: #f9ddac;
+  --color-text-secondary: #f9ddac;
   --color-accent-primary: #f9ddac;
   --color-accent-secondary: #f9ddac;
   --color-overlay-primary: rgba(50, 0, 0, 0.7);
@@ -121,23 +121,23 @@
   --h5-color: #f9ddac;
   --h6-color: #f9ddac;
   /* Special Text Colours */
-  --color-text-holding-title: #acf9c3;
+  --color-text-holding-title: #f9ddac;
   --color-text-project-category: #320000;
-  --color-text-project-description: #389457;
+  --color-text-project-description: #f9ddac;
   --color-text-project-sidebar: #ffffff;
-  --color-text-project-title: #b6acf9;
+  --color-text-project-title: #f9ddac;
   --color-text-work-grid-title: #320000;
   /* Link States */
   --color-link: #f9ddac;
-  --color-link-hover: white;
+  --color-link-hover: #95241f;
   --color-link-visited: #f9ddac;
   /* Navigation */
   --color-nav-link: #f9ddac;
-  --color-nav-link-hover: #ffffff;
+  --color-nav-link-hover: #95241f;
   --color-nav-arrow: #f9ddac;
-  --color-nav-arrow-hover: #ffffff;
-  --color-nav-arrow-stroke: #ffffff;
-  --color-nav-arrow-stroke-hover: #ffffff;
+  --color-nav-arrow-hover: #95241f;
+  --color-nav-arrow-stroke: #95241f;
+  --color-nav-arrow-stroke-hover: #95241f;
   /* Components */
   --color-bg-full-width: #f9ddac;
 
@@ -148,7 +148,7 @@
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
   /* Animation Durations */
-  --duration-fast: 0.15s; /* Quick interactions (hover states) */
+  --duration-fast: 0.2s; /* Quick interactions (hover states) */
   --duration-normal: 0.3s; /* Standard transitions (button clicks) */
   --duration-slow: 0.75s; /* Prominent animations (page transitions) */
   /* Rounded Corners */
