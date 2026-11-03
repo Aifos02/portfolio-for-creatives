@@ -1,0 +1,130 @@
+/* Keep the SVG definitions hidden while making them available to the clip-path */
+.svg-defs {
+  width: 0;
+  height: 0;
+}
+
+/* Main hero section */
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  padding: 2rem;
+
+  /* Center the grid horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Arrange the masks in equal-width columns */
+.mask-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.mask {
+  display: grid;
+
+  /* Maintain the width-to-height proportions of the original SVG shape */
+  aspect-ratio: 340 / 417;
+}
+
+/* Stack the shape and photo in the same grid cell */
+.mask::before,
+.mask::after {
+  content: "";
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+
+  /* Apply the SVG clip-path to both pseudo-elements */
+  clip-path: url(#shape-clip);
+  -webkit-clip-path: url(#shape-clip);
+}
+
+/* Display the SVG shape before hover */
+.mask::before {
+  background-color: #95241f;
+}
+
+/* Use the same photograph URL for all four masks.
+   Each mask displays a different quarter using background-position. */
+.mask::after {
+  background-image: url("https://assets.codepen.io/316293/paint.jpg");
+
+  /* Size the photograph to four times the mask width and the mask height */
+  background-size: 400% 100%;
+  background-repeat: no-repeat;
+
+  /* Hide the photograph until the mask is hovered */
+  opacity: 0;
+
+  /* Fade the photograph in and out */
+  transition: opacity 0.4s ease;
+}
+
+/* Reveal the photograph when hovering anywhere within the mask's rectangle */
+.mask:hover::after {
+  opacity: 1;
+}
+
+/* Display the first quarter of the photograph */
+.mask-one::after {
+  background-position: 0% center;
+}
+
+/* Display the second quarter of the photograph */
+.mask-two::after {
+  background-position: 33.33% center;
+}
+
+/* Display the third quarter of the photograph */
+.mask-three::after {
+  background-position: 66.66% center;
+}
+
+/* Display the fourth quarter of the photograph */
+.mask-four::after {
+  background-position: 100% center;
+}
+
+/* Hide the remaining masks on mobile */
+.mask-two,
+.mask-three,
+.mask-four {
+  display: none;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .hero {
+    min-height: 60vh;
+  }
+
+  .mask-two {
+    display: grid;
+  }
+
+  .mask-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .hero {
+    min-height: 40vh;
+  }
+
+  .mask-three,
+  .mask-four {
+    display: grid;
+  }
+
+  .mask-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

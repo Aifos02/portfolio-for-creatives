@@ -78,6 +78,9 @@
 /* File for adding a scroll-to-top button or effect */
 @import url("scroll-to-top.css");
 
+/* File for the mask effect in the hero */
+@import url("hero-masks.css");
+
 /* 
 ██    ██  █████  ██████  ██  █████  ██████  ██      ███████ ███████ 
 ██    ██ ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██      ██      
@@ -123,6 +126,7 @@
   /* Special Text Colours */
   --color-text-holding-title: #f9ddac;
   --color-text-project-category: #320000;
+  --color-text-project-category-mobile: #f9ddac;
   --color-text-project-description: #f9ddac;
   --color-text-project-sidebar: #ffffff;
   --color-text-project-title: #f9ddac;
@@ -566,7 +570,7 @@ sup {
 
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
-  color: var(--color-text-project-category);
+  color: var(--color-text-project-category-mobile);
   text-align: left;
   padding-left: 1.5rem;
 }
@@ -683,6 +687,7 @@ a.nav-link-primary:hover {
 }
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
+  width: 100%;
 }
 
 .nav-branding {
@@ -702,7 +707,7 @@ a.nav-link-primary:hover {
 }
 
 .nav-branding-logo {
-  width: 3rem;
+  width: 2rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -719,8 +724,6 @@ a.nav-link-primary:hover {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--padding-large);
-  min-height: 80vh;
 }
 
 .hero-wordmark {
@@ -867,11 +870,7 @@ a.nav-link-primary:hover {
 /* Project container for background and padding */
 .project-container {
   background: transparent; /* Set project background color */
-  padding: var(--padding-medium);
-}
-
-.project-container:hover {
-  background: var(--color-accent-primary);
+  padding: var(--padding-tiny);
 }
 
 /* Overlay (appears on hover) */
@@ -893,7 +892,9 @@ a.nav-link-primary:hover {
   background-color: var(
     --color-overlay-primary
   ); /* Background color of the overlay */
-  transition: opacity var(--duration-normal), visibility var(--duration-normal);
+  transition:
+    opacity var(--duration-normal),
+    visibility var(--duration-normal);
 }
 
 /* Hover effect on work page grid items */
@@ -1508,11 +1509,6 @@ to keep your styles reusable and consistent.
 
   .hero-headline-wrapper {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
-    padding: var(--padding-large);
-    min-height: 80vh;
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
@@ -1693,6 +1689,19 @@ to keep your styles reusable and consistent.
 
   .work-details {
     width: 75%;
+  }
+
+  /* Project container for background and padding */
+  .project-container {
+    padding: var(--padding-medium);
+  }
+
+  /* 🏷️ Project category label — displays the type or role of the project */
+  .work-grid-project-category {
+    color: var(--color-text-project-category);
+  }
+  .project-container:hover {
+    background: var(--color-accent-primary);
   }
 }
 
