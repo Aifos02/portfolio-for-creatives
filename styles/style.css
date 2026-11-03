@@ -32,8 +32,10 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Averia Serif Libre (for headers or special text) */
-@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+/* Fraunces (for headers or special text) */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Borel&display=swap");
 
 /*
 
@@ -96,63 +98,57 @@
 
 :root {
   /* Typography */
-  --font-family-body: "Averia Serif Libre", sans-serif;
-  --font-family-heading: "Averia Serif Libre", serif;
-  --font-family-project-title: "Averia Serif Libre", serif;
+  --font-family-body: "Fraunces", serif;
+  --font-family-heading: "Fraunces", serif;
+  --font-family-project-title: "Fraunces", serif;
   /* Core Colours */
-  --color-text-primary: #fff0d6;
-  --color-text-secondary: #fff0d6;
-  --color-accent-primary: #fff0d6;
-  --color-accent-secondary: #930000;
-  --color-overlay-primary: rgba(72, 0, 0, 0.35);
-  --color-highlight: lemonchiffon;
-  --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
+  --color-text-primary: #f9ddac;
+  --color-text-secondary: #f9ddac;
+  --color-accent-primary: #f9ddac;
+  --color-accent-secondary: #f9ddac;
+  --color-overlay-primary: rgba(50, 0, 0, 0.7);
+  --color-highlight: #f9ddac;
   /* Backgrounds */
   --color-bg: #320000;
-  --color-bg-about: #320000;
-  --color-bg-footer: rgb(50, 0, 0, 0.8);
+  --color-bg-about: rgb(50, 0, 0, 0.7);
+  --color-bg-footer: rgb(50, 0, 0, 0.7);
   --color-bg-holding-page: rgba(72, 0, 0, 0.35);
   /* Headings */
-  --h1-color: #fff0d6;
-  --h2-color: #fff0d6;
-  --h3-color: #fff0d6;
-  --h4-color: #fff0d6;
-  --h5-color: #fff0d6;
-  --h6-color: #fff0d6;
+  --h1-color: #f9ddac;
+  --h2-color: #f9ddac;
+  --h3-color: #f9ddac;
+  --h4-color: #f9ddac;
+  --h5-color: #f9ddac;
+  --h6-color: #f9ddac;
   /* Special Text Colours */
-  --color-text-holding-title: #fff0d6;
-  --color-text-project-category: #fff0d6;
-  --color-text-project-description: #fff0d6;
-  --color-text-project-sidebar: #930000;
-  --color-text-project-title: #fff0d6;
-  --color-text-work-grid-title: #fff0d6;
+  --color-text-holding-title: #f9ddac;
+  --color-text-project-category: #320000;
+  --color-text-project-description: #f9ddac;
+  --color-text-project-sidebar: #ffffff;
+  --color-text-project-title: #f9ddac;
+  --color-text-work-grid-title: #320000;
   /* Link States */
-  --color-link: #fff0d6;
-  --color-link-hover: #930000;
-  --color-link-visited: #fff0d6;
+  --color-link: #f9ddac;
+  --color-link-hover: #95241f;
+  --color-link-visited: #f9ddac;
   /* Navigation */
-  --color-nav-link: #fff0d6;
-  --color-nav-link-hover: #930000;
-  --color-nav-arrow: #fff0d6;
-  --color-nav-arrow-hover: #930000;
-  --color-nav-arrow-stroke: #930000;
-  --color-nav-arrow-stroke-hover: #930000;
+  --color-nav-link: #f9ddac;
+  --color-nav-link-hover: #95241f;
+  --color-nav-arrow: #f9ddac;
+  --color-nav-arrow-hover: #95241f;
+  --color-nav-arrow-stroke: #95241f;
+  --color-nav-arrow-stroke-hover: #95241f;
   /* Components */
-  --color-bg-full-width: #fff0d6;
-  --color-bg-project-description: transparent;
-  --color-bg-sidebar-project: orangered;
-  --color-bg-sidebar-work: lemonchiffon;
-  --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
+  --color-bg-full-width: #f9ddac;
 
   /* Special Elements */
-  --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
   --color-bg-selection: #005336;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
   /* Animation Durations */
-  --duration-fast: 0.15s; /* Quick interactions (hover states) */
+  --duration-fast: 0.2s; /* Quick interactions (hover states) */
   --duration-normal: 0.3s; /* Standard transitions (button clicks) */
   --duration-slow: 0.75s; /* Prominent animations (page transitions) */
   /* Rounded Corners */
@@ -198,7 +194,7 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
-  /* cursor: url("../assets/temp/up-cursor.png"), auto !important;  */
+  cursor: url("../assets/branding-images/cursor.svg"), auto !important;
 
   /* Custom cursor (change the URL below to use your own) */
 
@@ -216,7 +212,7 @@ html {
 body {
   font-family: var(--font-family-body);
   color: var(--color-text-primary);
-  background: url(../assets/work/background-texture.jpg);
+  /* background: url(../assets/work/background-texture.jpg); */
   background-color: var(--color-bg);
   background-repeat: repeat-x;
   background-size: contain;
@@ -463,13 +459,15 @@ h2 {
 
 h3 {
   font-size: 1.325rem;
+  font-family: var(--font-family-heading);
   margin-bottom: 1rem;
   line-height: 1.2;
   color: var(--h3-color);
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-style: italic;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h4-color);
@@ -495,7 +493,7 @@ h6 {
 /* ------------------------------------------------------------------ */
 
 p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.3;
   margin-bottom: 1rem;
 }
@@ -534,6 +532,8 @@ sup {
 .project-title {
   font-size: 3.625rem;
   font-family: var(--font-family-project-title);
+  font-style: italic;
+  font-weight: 600;
   color: var(--color-text-project-title);
   margin-bottom: 1rem;
 }
@@ -558,13 +558,6 @@ sup {
   color: var(--color-accent-secondary);
 }
 
-.highlight-gradient {
-  background: var(--color-gradient-hero);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-}
-
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
   font-size: 2.875rem;
@@ -574,6 +567,8 @@ sup {
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
   color: var(--color-text-project-category);
+  text-align: left;
+  padding-left: 1.5rem;
 }
 
 /*
@@ -712,12 +707,12 @@ a.nav-link-primary:hover {
 }
 
 .logo {
-  fill: #fff0d6;
+  fill: #f9ddac;
   transition: 200ms;
   transition-timing-function: ease-in-out;
 }
 .logo:hover {
-  fill: orange;
+  fill: #ffffff;
 }
 
 .hero-headline-wrapper {
@@ -871,8 +866,12 @@ a.nav-link-primary:hover {
 
 /* Project container for background and padding */
 .project-container {
-  background: var(--color-accent-primary); /* Set project background color */
+  background: transparent; /* Set project background color */
   padding: var(--padding-medium);
+}
+
+.project-container:hover {
+  background: var(--color-accent-primary);
 }
 
 /* Overlay (appears on hover) */
@@ -901,11 +900,6 @@ a.nav-link-primary:hover {
 .work-page-grid-item:hover .overlay {
   visibility: visible; /* Make overlay visible on hover */
   opacity: 1; /* Set opacity on hover */
-}
-
-/* Optional container for future overlay customization */
-.project-details-overlay {
-  /* Placeholder: no custom styles yet */
 }
 
 /*
@@ -1161,6 +1155,14 @@ a.nav-link-primary:hover {
   margin-bottom: 1rem; /* Space below the image */
 }
 
+.project-mockup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem; /* Space below the image */
+}
+
 /* Container for project description */
 .project-description-container {
   display: flex;
@@ -1232,6 +1234,18 @@ a.nav-link-primary:hover {
   font-size: 1rem;
   line-height: 1.2; /* Consistent line height for project items to improve spacing */
   margin-bottom: 0.25rem;
+}
+
+/* Upheaval project page — remove extra header spacing */
+body.play-page > .hero {
+  height: auto;
+  min-height: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+body.play-page .project-wrapper {
+  margin-top: 0;
 }
 
 /*
@@ -1329,7 +1343,27 @@ a.nav-link-primary:hover {
   margin: 0 auto;
 }
 
+.error-headline-index {
+  color: #005336;
+}
+
+/* .error-headline-text-wrapper {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-small);
+  text-align: center;
+  margin: 0 auto;
+} */
+
 .error-page-animation {
+  width: 25rem;
+}
+
+.about-page-animation {
   width: 25rem;
 }
 
@@ -1354,10 +1388,6 @@ Use this section to style elements that are *unique to the Play page*.
 For common layout or effects, continue using the base utility classes
 to keep your styles reusable and consistent.
 */
-
-.play-page {
-  /* Add page-specific layout or container styles here */
-}
 
 /*
 
@@ -1480,7 +1510,7 @@ to keep your styles reusable and consistent.
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     padding: var(--padding-large);
     min-height: 80vh;
   }
@@ -1489,6 +1519,18 @@ to keep your styles reusable and consistent.
     padding-bottom: var(--padding-small);
     padding-left: var(--padding-ultra);
     padding-right: var(--padding-ultra);
+  }
+
+  .error-headline-wrapper {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-small);
+    text-align: center;
+    margin: 0 auto;
   }
 
   .error-404 {
