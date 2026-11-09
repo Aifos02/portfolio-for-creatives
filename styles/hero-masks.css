@@ -53,7 +53,7 @@
 /* Use the same photograph URL for all four masks.
    Each mask displays a different quarter using background-position. */
 .mask::after {
-  background-image: url("https://assets.codepen.io/316293/paint.jpg");
+  background-image: url("../assets/branding-images/pictures\ triel\ 2.jpg");
 
   /* Size the photograph to four times the mask width and the mask height */
   background-size: 400% 100%;

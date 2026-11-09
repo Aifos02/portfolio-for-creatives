@@ -107,7 +107,7 @@
   /* Core Colours */
   --color-text-primary: #f9ddac;
   --color-text-secondary: #f9ddac;
-  --color-accent-primary: #f9ddac;
+  --color-accent-primary: #ffe7cb;
   --color-accent-secondary: #f9ddac;
   --color-overlay-primary: rgba(50, 0, 0, 0.7);
   --color-highlight: #f9ddac;
@@ -892,9 +892,7 @@ a.nav-link-primary:hover {
   background-color: var(
     --color-overlay-primary
   ); /* Background color of the overlay */
-  transition:
-    opacity var(--duration-normal),
-    visibility var(--duration-normal);
+  transition: opacity var(--duration-normal), visibility var(--duration-normal);
 }
 
 /* Hover effect on work page grid items */
