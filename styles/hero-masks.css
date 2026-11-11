@@ -8,7 +8,6 @@
 .hero {
   width: 100%;
   min-height: 80vh;
-  padding: 2rem;
 
   /* Center the grid horizontally and vertically */
   display: flex;

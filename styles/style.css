@@ -892,7 +892,9 @@ a.nav-link-primary:hover {
   background-color: var(
     --color-overlay-primary
   ); /* Background color of the overlay */
-  transition: opacity var(--duration-normal), visibility var(--duration-normal);
+  transition:
+    opacity var(--duration-normal),
+    visibility var(--duration-normal);
 }
 
 /* Hover effect on work page grid items */
@@ -1235,18 +1237,6 @@ a.nav-link-primary:hover {
   margin-bottom: 0.25rem;
 }
 
-/* Upheaval project page — remove extra header spacing */
-body.play-page > .hero {
-  height: auto;
-  min-height: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-body.play-page .project-wrapper {
-  margin-top: 0;
-}
-
 /*
 
 ██████  ██       ██████   ██████      ██ ██████  ███████ ███████ ██    ██ ███    ███ ███████ 
@@ -1505,8 +1495,12 @@ to keep your styles reusable and consistent.
     min-height: 100vh;
   }
 
+  .hero-header {
+    padding: 2rem;
+  }
   .hero-headline-wrapper {
     width: 100%;
+    flex: 1;
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
